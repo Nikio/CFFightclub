@@ -6,15 +6,17 @@
 <title> CrazyForces' StarCraft2 Fightclub </title>
 </head>
 <body>
+<script src="fc_scripts.js"></script>
 <h1> CrazyForces' StarCraft2 Fightclub</h1> 
 <section>
 <p>Hi, du befindest dich auf der Startseite des SC2 Fightclubs.<br> 
 Hier kannst du eine Partie anfordern, die Rankingliste einsehen und Replays von gespielten Partien eintragen. 
 </section>
 <section>
+<p id="ackMsg"></p>
 <div class="buttons">
-<button type="button"> I want a fight!</button>
-<button type="button"> View my rank! </button>
+<button type="button" id="challengeButton" onmouseover="changeButtonColor(id)" onmouseout="changeButtonColor(id)" onclick="acknowledgeChallenge('ackMsg', id)"> I want a fight!</button>
+<button type="button" id="rankingButton" onmouseover="changeButtonColor(id)" onmouseout="changeButtonColor(id)" onclick="location.reload();location.href='https://docs.google.com/spreadsheets/d/1uoblfTW_Rcm0Dp94rhOiMkeS6krKxjmNIGFWgNoyvdA/edit#gid=165334965'"> View my rank! </button>
 </div class="buttons">
 </section>
 </body>
