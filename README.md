@@ -8,3 +8,31 @@ Current goals:
    --> Display of the current ranking
    --> HTML Adaptation based on the user and the current status (available, unavailable, challenged)
    --> Creating the php basis
+
+-- German comments for the developer --
+
+Aktueller Stand Projekt "CF_App":
+- HTML Seite angelegt
+- CSS File angelegt
+- Graphische JavaScript Funktionalität angelegt
+
+Was wird gewollt?
+Bei der Anforderung der Seite:
+- Check des Users auf das Status-Attribut
+	--> abhängig von dem Status ist der Inhalt der Webseite anders
+		- Status "Challenged": Anzeige des aktuellen Gegners und Textfelder für das Eintragen des Endstandes sowie der Replays
+		- Status "Available": Anzeige der Forderungsseite die bereits vorhanden ist
+		- Status "Unavailable": Anzeige einer Informationsseite ohne Forderungs-Funktionalität
+
+Forderung:
+- Der User klickt auf den Challenge-Button
+	--> Ein Form wird zum Server geschickt (enthält die ID des Spielers)
+	--> Der Server macht eine Zuteilung
+		- Extraction der ID aus dem Form
+		- Check ob der Spieler schon gematched wurd (Zeitkritisch)
+		- Auswahl der verfügbarer! Spieler aus der MMR-Liste (z.B. mit einer Datenbankabfrage) 
+		- Auswahl des Gegners per Pseudo-Randomnr-Generator
+		- Eintrag der Gegner in der jeweiligen Sparte und setzen des Status-Attributs auf "challenged"
+		- Übermittlung des Gegnernamens an den Browser
+	--> Anzeige des Gegners
+	//Der Gegner muss benachrichtigt werden (das wird in Abstimmung mit dem Admin gelöst)
