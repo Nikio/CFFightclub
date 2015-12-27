@@ -10,8 +10,7 @@ function acknowledgeChallenge(paragraphId, buttonId) {
     
     //Hiding the button
     var buttonDom = document.getElementById(buttonId);
-    buttonDom.style.display = 'none';
-    
+    buttonDom.style.display = 'none';    
 }
 
 function changeButtonColor(id) {

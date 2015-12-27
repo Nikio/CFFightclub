@@ -6,6 +6,8 @@ p {color:white; text-align:center;}
 
 section {margin: auto; width: 15%; paddingx: 20px; float:none;}
 
+#ackMsg {color:#900}
 button {margin:auto; background-color:#900; color:white; text-align:center; padding:20px;}
+input {margin:auto; background-color:#900; color:white; text-align:center; padding:20px;}
 
 div.buttons {margin:auto; background-color:darkgrey; text-align:center; padding:15%;}

@@ -18,7 +18,13 @@ Hier kannst du eine Partie anfordern, die Rankingliste einsehen und Replays von 
 <section>
 <p id="ackMsg"></p>
 <div class="buttons">
-<button type="button" id="challengeButton" onmouseover="changeButtonColor(id)" onmouseout="changeButtonColor(id)" onclick="acknowledgeChallenge('ackMsg', id)"> I want a fight!</button>
+    <form action=fc_php.php method="post">
+        <!--Get the userID and find out the type needed -->
+        Enter a userid:<br>
+        <input type="text" name="userid" id="inputfieldId" onclick="changeButtonColor(id)"><br>
+        <input type="submit" value="I want a fight!" id="challengeButton" onmouseover="changeButtonColor(id)" onmouseout="changeButtonColor(id)">
+    </form>
+
 <button type="button" id="rankingButton" onmouseover="changeButtonColor(id)" onmouseout="changeButtonColor(id)" onclick="location.reload();location.href='https://docs.google.com/spreadsheets/d/1uoblfTW_Rcm0Dp94rhOiMkeS6krKxjmNIGFWgNoyvdA/edit#gid=165334965'"> View my rank! </button>
 </div class="buttons">
 </section>

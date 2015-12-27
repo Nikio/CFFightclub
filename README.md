@@ -19,18 +19,18 @@ Aktueller Stand Projekt "CF_App":
 Was wird gewollt?
 Bei der Anforderung der Seite:
 - Check des Users auf das Status-Attribut
-	--> abhängig von dem Status ist der Inhalt der Webseite anders
+	--> abhängig von dem Status ist der Inhalt der Webseite anders //Mach dies per php-file das ein HTML-Template generiert
 		- Status "Challenged": Anzeige des aktuellen Gegners und Textfelder für das Eintragen des Endstandes sowie der Replays
 		- Status "Available": Anzeige der Forderungsseite die bereits vorhanden ist
 		- Status "Unavailable": Anzeige einer Informationsseite ohne Forderungs-Funktionalität
 
 Forderung:
 - Der User klickt auf den Challenge-Button
-	--> Ein Form wird zum Server geschickt (enthält die ID des Spielers)
-	--> Der Server macht eine Zuteilung
-		- Extraction der ID aus dem Form
-		- Check ob der Spieler schon gematched wurd (Zeitkritisch)
-		- Auswahl der verfügbarer! Spieler aus der MMR-Liste (z.B. mit einer Datenbankabfrage) 
+	--> Ein Form wird zum Server geschickt (enthält die ID des Spielers) //Nutzen der POST-Methode für mehr security
+	--> Der Server macht eine Zuteilung //Jeweils die SQLQueries schreiben
+		- Extraction der ID aus dem Form (done)
+		- Check ob der Spieler schon gematched wurd (Zeitkritisch) (TODO)
+		- Auswahl der verfügbarer! Spieler aus der MMR-Liste (done)
 		- Auswahl des Gegners per Pseudo-Randomnr-Generator
 		- Eintrag der Gegner in der jeweiligen Sparte und setzen des Status-Attributs auf "challenged"
 		- Übermittlung des Gegnernamens an den Browser
